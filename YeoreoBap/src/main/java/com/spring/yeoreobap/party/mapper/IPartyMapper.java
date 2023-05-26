@@ -3,19 +3,21 @@ package com.spring.yeoreobap.party.mapper;
 import java.util.List;
 
 import com.spring.yeoreobap.command.PartyVO;
+import com.spring.yeoreobap.util.PageVO;
 
 public interface IPartyMapper {
-	
-	//±Û µî·Ï
-	void regist(PartyVO vo);
-	//±Û ¸ñ·Ï
-	List<PartyVO> getList();
-	//»ó¼¼º¸±â
-	PartyVO getarticle(int partyNo);
-	//¼öÁ¤
-	
-	//»èÁ¦
-	
-	//Âü¿©
 
+	//ê¸€ ë“±ë¡
+	void regist(PartyVO vo);
+	//ê¸€ ëª©ë¡
+	List<PartyVO> getList(PageVO vo);
+	//ê²Œì‹œê¸€ ì´ ìˆ˜
+	int getTotal();
+	//ìƒì„¸ë³´ê¸°
+	PartyVO getArticle(int partyNo);
+	//ìˆ˜ì •
+	void update(PartyVO vo);
+	//ì‚­ì œ
+	void delete(int partyNo);
+	//ì°¸ì—¬
 }

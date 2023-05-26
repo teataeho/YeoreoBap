@@ -18,7 +18,7 @@ public class FreeBoardVO {
 	private LocalDateTime regDate;
 	private LocalDateTime updateDate;
 
-	//ÇÏ³ªÀÇ °Ô½Ã¹°ÀÌ ¸î °³ÀÇ ´ñ±ÛÀ» Æ÷ÇÔÇÏ´ÂÁö 
+	//ëŒ“ê¸€ ìˆ˜ 
 	private int replyCnt;
 
 }

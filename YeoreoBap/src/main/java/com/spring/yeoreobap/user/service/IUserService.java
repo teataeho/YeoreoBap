@@ -5,18 +5,18 @@ import com.spring.yeoreobap.util.PageVO;
 
 public interface IUserService {
 
-	//¾ÆÀÌµğ Áßº¹ È®ÀÎ
+	//ì•„ì´ë”” ì¤‘ë³µ í™•ì¸
 	int idCheck(String userId);
-	
-	//È¸¿ø °¡ÀÔ
+
+	//íšŒì› ê°€ì…
 	void join(UserVO vo);
-	
-	//·Î±×ÀÎ
+
+	//ë¡œê·¸ì¸
 	String login(String userId, String userPw);
-	
-	//È¸¿ø Á¤º¸ ¾ò±â
+
+	//íšŒì› ì •ë³´ ì–»ê¸°
 	UserVO getInfo(String userId, PageVO vo);
-	
-	//È¸¿ø Á¤º¸ ¼öÁ¤
+
+	//íšŒì› ì •ë³´ ìˆ˜ì •
 	void updateUser(UserVO vo);
 }

@@ -15,13 +15,13 @@ public class StoreService implements IStoreService {
 	@Autowired
 	private IStoreMapper mapper;
 	
-	//¸ñ·Ï
+	//ëª©ë¡
 	@Override
 	public List<StoreVO> getList(PageVO vo) {
 		return mapper.getList(vo);
 	}
 
-	//»ó¼¼
+	//ìƒì„¸
 	@Override
 	public StoreVO getContent(int sno) {
 		return mapper.getContent(sno);

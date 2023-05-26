@@ -12,12 +12,12 @@ public class PageVO {
 	private int pageNum;
 	private int cpp;
 	
-	//°Ë»ö ¿äÃ»¿¡ ÇÊ¿äÇÑ ÇÊµå¸¦ Ãß°¡
+	//ê²€ìƒ‰ ìš”ì²­ì— í•„ìš”í•œ í•„ë“œë¥¼ ì¶”ê°€
 	private String keyword;
 	private String condition;
 	
 	
-	//myPage¿¡¼­ ÆäÀÌÂ¡À» ±¸ÇöÇÏ±â À§ÇÑ ÇÊµå¸¦ Ãß°¡
+	//myPageì—ì„œ í˜ì´ì§•ì„ êµ¬í˜„í•˜ê¸° ìœ„í•œ í•„ë“œë¥¼ ì¶”ê°€
 	private String loginId;
 	
 	public PageVO() {

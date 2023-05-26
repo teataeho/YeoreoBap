@@ -4,21 +4,22 @@ import com.spring.yeoreobap.command.FreeBoardVO;
 
 public class IFreeBoardService {
 
-//	//±Û µî·Ï
+//	//ê¸€ ë“±ë¡
 //	void regist(FreeBoardVO vo);
 //
-//	//±Û ¸ñ·Ï
+//	//ê¸€ ëª©ë¡
 //	List<FreeBoardVO> getList(PageVO vo);
 //
-//	//ÃÑ °Ô½Ã¹° ¼ö ±¸ÇÏ±â
+//	//ì´ ê²Œì‹œë¬¼ ìˆ˜ êµ¬í•˜ê¸°
 //	int getTotal(PageVO vo);
 //
-//	//»ó¼¼º¸±â
+//	//ìƒì„¸ë³´ê¸°
 //	FreeBoardVO getContent(int bno);
 //
-//	//¼öÁ¤
+//	//ìˆ˜ì •
 //	void update(FreeBoardVO vo);
 //
-//	//»èÁ¦
+//	//ì‚­ì œ
 //	void delete(int bno);
+
 }

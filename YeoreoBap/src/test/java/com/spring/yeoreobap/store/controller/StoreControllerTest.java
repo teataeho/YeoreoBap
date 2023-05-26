@@ -37,14 +37,14 @@ public class StoreControllerTest {
 	}
 	
 	@Test
-	@DisplayName("/store/storeList ¿äÃ»")
+	@DisplayName("/store/storeList í…ŒìŠ¤íŠ¸")
 	void testList() throws Exception {
 		ModelAndView mv = 
 				mockMvc.perform(MockMvcRequestBuilders.get("/store/storeList"))
 				.andReturn()
 				.getModelAndView();
-		System.out.println("Model ³»¿¡ ÀúÀåÇÑ µ¥ÀÌÅÍ: " + mv.getModelMap());
-		System.out.println("ÀÀ´ä Ã³¸®¸¦ À§ÇØ »ç¿ëÇÒ ÆäÀÌÁö: " + mv.getViewName());
+		System.out.println("Model ë‚´ì— ì €ì¥í•œ ë°ì´í„°: " + mv.getModelMap());
+		System.out.println("ì‘ë‹µ ì²˜ë¦¬ë¥¼ ìœ„í•´ ì‚¬ìš©í•  í˜ì´ì§€: " + mv.getViewName());
 	}
 	
 	@Test

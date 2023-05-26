@@ -7,12 +7,12 @@ import com.spring.yeoreobap.util.PageVO;
 
 public interface IStoreService {
 
-	//¸ñ·Ï
+	//ëª©ë¡
 	List<StoreVO> getList(PageVO vo);
 	
-	//»ó¼¼
+	//ìƒì„¸
 	StoreVO getContent(int sno);
 	
-	//ÀüÃ¼ °Ô½Ã¹° ±¸ÇÏ±â
+	//ì „ì²´
 	int getTotal(PageVO vo);
 }

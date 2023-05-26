@@ -25,18 +25,18 @@ public class UserMapperTest {
 	private IUserMapper mapper;
 	
 	@Test
-	@DisplayName("È¸¿ø°¡ÀÔÀ» ÁøÇàÇßÀ» ¶§ È¸¿ø°¡ÀÔ¿¡ ¼º°øÇØ¾ß ÇÑ´Ù.")
+	@DisplayName("íšŒì›ê°€ì…ì— ì„±ê³µ.")
 	void registTest() {
 		UserVO vo = new UserVO();
 		vo.setUserId("abc1234");
 		vo.setUserPw("aaa1111!");
-		vo.setUserName("È«±æµ¿");
+		vo.setUserName("È«ï¿½æµ¿");
 		
 		mapper.join(vo);
 	}
 	
 	@Test
-	@DisplayName("Á¸ÀçÇÏ´Â È¸¿ø ¾ÆÀÌµğ¸¦ Á¶È¸ÇÏ¸é 1ÀÌ ¸®ÅÏµÇ¾î¾ß ÇÑ´Ù.")
+	@DisplayName("íšŒì› ì•„ì´ë””ë¥¼ ì¡°íšŒí•˜ë©´ 1ì´ ë¦¬í„´")
 	void checkIdTest() {
 		
 		String userId = "abc1234";	
@@ -46,7 +46,7 @@ public class UserMapperTest {
 	
 
 	@Test
-	@DisplayName("Á¸ÀçÇÏ´Â È¸¿ø ¾ÆÀÌµğ¿Í ¿Ã¹Ù¸¥ ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇÏ¸é È¸¿øÀÇ Á¤º¸°¡ ¸®ÅÏµÇ¾î¾ß ÇÑ´Ù.")
+	@DisplayName("ì„±ê³µ?")
 	void loginTest() {
 		String userId = "abc1234";
 		String userPw = "aaa1111!";
@@ -57,7 +57,7 @@ public class UserMapperTest {
 
 	
 	@Test
-	@DisplayName("Á¸ÀçÇÏÁö ¾Ê´Â È¸¿ø ¾ÆÀÌµğ¸¦ ÀÔ·ÂÇÏ¸é nullÀÌ ¿Â´Ù.")
+	@DisplayName("ì¡´ì¬í•˜ì§€ ì•ŠëŠ” íšŒì› ì•„ì´ë”” null")
 	void getInfoTest() {
 //		String id = "abc1234";
 //		UserVO vo = new UserVO(); 
@@ -71,19 +71,19 @@ public class UserMapperTest {
 
 	
 	@Test
-	@DisplayName("¾ÆÀÌµğ¸¦ Á¦¿ÜÇÑ È¸¿øÀÇ Á¤º¸¸¦ ¼öÁ¤ÇÒ ¼ö ÀÖ´Ù.")
+	@DisplayName("ì•„ì´ë””ë¥¼ ì œì™¸í•œ íšŒì›ì˜ ì •ë³´ë¥¼ ìˆ˜ì •í•  ìˆ˜ ìˆë‹¤.")
 	void updateTest() {
 		UserVO vo = new UserVO();
 		vo.setUserId("abc1234");
 		vo.setUserPw("aaa1111!");
-		vo.setUserName("¼öÁ¤ ÀÌ¸§");
-		vo.setUserPhone1("¼öÁ¤ Æù1");
-		vo.setUserPhone2("¼öÁ¤ Æù2");
-		vo.setUserEmail1("¼öÁ¤ ÀÌ¸ŞÀÏ1");
-		vo.setUserEmail2("¼öÁ¤ ÀÌ¸ŞÀÏ2");
-		vo.setAddrBasic("¼öÁ¤ ÁÖ¼Ò");
-		vo.setAddrDetail("¼öÁ¤ ÁÖ¼Ò »ó¼¼");
-		vo.setAddrZipNum("ÁÖ¼Ò Áı³Ñ");
+		vo.setUserName("ìˆ˜ì • ì´ë¦„");
+		vo.setUserPhone1("ìˆ˜ì • í°1");
+		vo.setUserPhone2("ìˆ˜ì • í°2");
+		vo.setUserEmail1("ìˆ˜ì • ì´ë©”ì¼1");
+		vo.setUserEmail2("ìˆ˜ì • ì´ë©”ì¼2");
+		vo.setAddrBasic("ìˆ˜ì • ì£¼ì†Œ");
+		vo.setAddrDetail("ìˆ˜ì • ì£¼ì†Œ ìƒì„¸");
+		vo.setAddrZipNum("ì£¼ì†Œ ì§‘ë„˜");
 		mapper.updateUser(vo);
 //		assertEquals(mapper.getInfo("abc1234").getUserName(),vo.getUserName());
 	}

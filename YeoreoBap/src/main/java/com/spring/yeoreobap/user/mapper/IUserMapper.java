@@ -6,25 +6,19 @@ import com.spring.yeoreobap.command.UserVO;
 import com.spring.yeoreobap.util.PageVO;
 
 public interface IUserMapper {
-	//¾ÆÀÌµğ Áßº¹ È®ÀÎ
+	//ì•„ì´ë”” ì¤‘ë³µ í™•ì¸
 	int idCheck(String userId);
 
-	//È¸¿ø °¡ÀÔ
+	//íšŒì› ê°€ì…
 	void join(UserVO vo);
 
-	//·Î±×ÀÎ
-	/*
-		 - MyBatis·Î DB¿¬µ¿ ÁøÇàÇÒ ¶§ ÆÄ¶ó¹ÌÅÍ °ªÀÌ 2°³ ÀÌ»óÀÏ ¶§ ¿¡·¯ ¹ß»ıÇÑ´Ù.
-		 1. @ParamÀ» ÀÌ¿ëÇØ¼­ ÀÌ¸§ ºÙ¿©ÁÖ´Â ¹æ¹ı(xml ÆÄÀÏ¿¡¼­ ÇØ´ç °ªÀ» Áö¸ñÇÒ ¼ö ÀÖ´Â ÀÌ¸§ ºÙÀÌ±â)
-		 2. MapÀ¸·Î Æ÷Àå
-		 3. Å¬·¡½º µğÀÚÀÎÇØ¼­ °´Ã¼ ÇÏ³ª¸¸ ¸Å°³°ªÀ¸·Î º¸³»´Â ¹æ¹ı(VO)
-		 															Áß ÇÏ³ª ¼±ÅÃ*/
+	//ë¡œê·¸ì¸
 	String login(String userId);
 
-	//È¸¿ø Á¤º¸ ¾ò±â
+	//íšŒì› ì •ë³´ ì–»ê¸°
 	UserVO getInfo(@Param("userId") String userId, @Param("paging") PageVO vo);
 
-	//È¸¿ø Á¤º¸ ¼öÁ¤
+	//íšŒì› ì •ë³´ ìˆ˜ì •
 	void updateUser(UserVO vo);
 
 }
