@@ -7,7 +7,6 @@ import com.spring.yeoreobap.util.PageVO;
 
 public interface IUserMapper {
 
-
 	//아이디 중복 확인
 	int idCheck(String userId);
 

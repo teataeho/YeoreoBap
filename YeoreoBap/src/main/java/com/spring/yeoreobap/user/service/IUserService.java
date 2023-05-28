@@ -3,7 +3,6 @@ package com.spring.yeoreobap.user.service;
 import com.spring.yeoreobap.command.UserVO;
 import com.spring.yeoreobap.util.PageVO;
 
-
 public interface IUserService {
 
 	//아이디 중복 확인

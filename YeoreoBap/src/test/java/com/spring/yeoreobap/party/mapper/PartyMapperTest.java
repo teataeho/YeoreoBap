@@ -68,8 +68,4 @@ public class PartyMapperTest {
 		mapper.delete(102);
 	}
 	
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cde39f681f7eb1771a2e595a0f85b0be9c90979d

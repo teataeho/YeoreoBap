@@ -7,12 +7,6 @@ import com.spring.yeoreobap.util.PageVO;
 
 public interface IStoreService {
 
-	
-	List<StoreVO> getList(PageVO vo);
-	
-	
-	StoreVO getContent(int sno);
-	
 	//목록
 	List<StoreVO> getList(PageVO vo);
 	

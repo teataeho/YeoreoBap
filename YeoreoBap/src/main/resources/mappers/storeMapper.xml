@@ -4,13 +4,13 @@
     
 <mapper namespace="com.spring.yeoreobap.store.mapper.IStoreMapper">
 
-    <select id="getList" resultType="store">
+    <select id="getList" resultType="board">
 		SELECT * FROM store
 		ORDER BY sno DESC
 		LIMIT #{pageStart}, #{cpp}
 	</select>
 	
-	<select id="getContent" resultType="store">
+	<select id="getContent" resultType="board">
 		SELECT * FROM store
 		WHERE sno = #{sno}
 	</select>

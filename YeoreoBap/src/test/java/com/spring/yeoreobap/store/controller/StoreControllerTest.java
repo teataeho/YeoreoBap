@@ -35,12 +35,10 @@ public class StoreControllerTest {
 		this.mockMvc = MockMvcBuilders.webAppContextSetup(ctx).build();
 	}
 	
-	@Test
-<<<<<<< HEAD
-	@DisplayName("/store/storeList 요청")
-=======
+	// @Test
+	// @DisplayName("/store/storeList 요청")
+	
 	@DisplayName("/store/storeList 테스트")
->>>>>>> cde39f681f7eb1771a2e595a0f85b0be9c90979d
 	void testList() throws Exception {
 		ModelAndView mv = 
 				mockMvc.perform(MockMvcRequestBuilders.get("/store/storeList"))
