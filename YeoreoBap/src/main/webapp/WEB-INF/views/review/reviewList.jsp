@@ -42,7 +42,7 @@
 				<table class="table table-bordered table-hover" id="table">
 					<thead>
 						<tr>
-							<th class="reviewNo">리뷰 번호</th>
+							<th class="reviewNo">번호</th>
 							<th id="board-title">제목</th>
 							<th class="reviewWriter">작성자</th>
 							<th>식당 이름</th>
