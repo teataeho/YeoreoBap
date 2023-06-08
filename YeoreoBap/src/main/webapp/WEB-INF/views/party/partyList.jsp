@@ -7,7 +7,7 @@
 
 				<!-- 파티 모집글 작성을 유도하는 글 -->
 				<div class="size">
-					<img src="${pageContext.request.contextPath}/img/ex_carousel1.png" class="d-block w-100" alt="메인 이미지1">
+					<img src="${pageContext.request.contextPath}/img/carousel_2.png" class="d-block w-100" alt="메인 이미지1">
 				</div>
 
 				<!-- 최상단 이동 버튼 클릭 시 이동 위치 -->
@@ -51,7 +51,7 @@
 								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 							</div>
 							<div class="modal-body">
-								<span class="content"></span> <br>
+								<span class="content" style="white-space: pre-line;"></span> <br>
 							</div>
 							<div class="modal-footer d-flex flex-nowrap justify-content-between border-top border-light-orange">
 								<div class="modal-footer-left">

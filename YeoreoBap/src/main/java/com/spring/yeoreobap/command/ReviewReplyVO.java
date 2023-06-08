@@ -22,12 +22,12 @@ public class ReviewReplyVO {
 
 	private int replyNo;
 	private int reviewNo;
-	
+
 	private String reply;
 	private String replyId;
 	private LocalDateTime regDate;
 
-	//조인용
+	// 조인용
 	private String userNick;
 
 }

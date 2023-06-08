@@ -1,11 +1,7 @@
-
-
-.bigBorder {
-    display: flex;
-}
-
-.smallBorder {
-    width: 60%;
+p.partyRegisterTitle {
+    width: 100px;
+    margin: 0;
+    text-align: right;
 }
 
 
@@ -23,13 +19,14 @@
 .imgSelect p {
     margin-top: 10px;
 }
+
 .custom span.warn {
     margin-top: 100px;
 }
 
 
 /* 인풋박스 */
-.border {
+/* .border {
     width: 70%;
     display: flex;
 }
@@ -40,29 +37,27 @@
     text-align: right;
     width: 15%;
 }
-.border p span, .partyPeople p span, .restName p span {
-    color: #F4B183;
-}
-
 
 .border input, .border textarea {
     width: 90%;
     margin-bottom: 30px;
-}
+} */
 
 
 /* 파티인원, 식당 */
-.partyPeople, .restName {
+.partyPeople,
+.restName {
     display: flex;
     margin-left: 10px;
     width: 90%;
     justify-content: flex-start;
-    
+
 }
 
-.partyPeople select, .restName2 {
+.partyPeople select,
+.restName2 {
     width: 80px;
-    margin: 0 0 1rem 1rem; 
+    margin: 0 0 1rem 1rem;
 }
 
 .restName input {
