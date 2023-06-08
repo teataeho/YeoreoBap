@@ -117,6 +117,7 @@
 						</table>
 					</form>
 
+				<hr><br>
 					<!-- 두번째 토글 끝 -->
 				</div>
 				<form action="${pageContext.request.contextPath}/user/deleteUser"

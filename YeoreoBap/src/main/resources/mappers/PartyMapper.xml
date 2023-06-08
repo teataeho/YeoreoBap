@@ -14,29 +14,33 @@
 	</insert>
 
 	<select id="getList" resultType="party">
-		SELECT p.*, s.rdn_whl_addr,
-		(SELECT COUNT(*) FROM partylike l
-		WHERE p.party_no = l.party_no) AS
-		likeCount
-		FROM party p
-		JOIN store s
-		ON p.sno
-		= s.sno
-		<choose>
-			<when test="condition == 'orderByLatest'">
-				ORDER BY p.party_no DESC
-			</when>
-			<when test="condition == 'orderByLike'">
-				ORDER BY likeCount DESC, p.party_no DESC
-			</when>
-		</choose>
-		LIMIT #{pageStart}, #{cpp}
-	</select>
-
-	
-
+        SELECT p.*, s.rdn_whl_addr,
+        (SELECT COUNT(*) FROM partylike l
+        WHERE p.party_no = l.party_no) AS
+        likeCount
+        FROM party p
+        JOIN store s
+        ON p.sno
+        = s.sno
+        ORDER BY p.party_no DESC
+        LIMIT #{pageStart}, #{cpp}
+    </select>
+    
+    <select id="getListHome" resultType="party">
+        SELECT p.*, s.rdn_whl_addr,
+        (SELECT COUNT(*) FROM partylike l
+        WHERE p.party_no = l.party_no) AS
+        likeCount
+        FROM party p
+        JOIN store s
+        ON p.sno
+        = s.sno
+        ORDER BY likeCount DESC
+        LIMIT 0, 10
+    </select>
+    
 	<select id="getArticle" resultType="party">
-		SELECT p.*, s.rdn_whl_addr,
+		SELECT p.*, s.rdn_whl_addr, p.view_num
 		(SELECT COUNT(*) FROM participants
 		WHERE party_no = #{partyNo}) AS
 		attended_num,

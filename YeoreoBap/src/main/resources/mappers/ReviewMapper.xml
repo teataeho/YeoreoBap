@@ -33,8 +33,10 @@
 	</insert>
 	<!-- regDate, updateDate 삭제 -->
 	<select id="getList" resultType="review">
-		SELECT r.*, u.user_nick, s.bplc_nm
-		FROM review r JOIN users u
+		SELECT r.*, u.user_nick, s.bplc_nm,
+		(SELECT COUNT(*) FROM reviewreply WHERE review_no = r.review_no) AS review_reply_cnt
+		FROM review r
+		JOIN users u
 		ON r.writer = u.user_id
 		JOIN store s ON r.sno = s.sno
 		<include refid="search" />
