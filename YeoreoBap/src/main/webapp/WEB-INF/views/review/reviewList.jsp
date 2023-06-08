@@ -58,6 +58,7 @@
 								<div class="text-truncate">
 								<a 
 									href="${pageContext.request.contextPath}/review/content/${vo.reviewNo}?pageNum=${pc.paging.pageNum}&cpp=${pc.paging.cpp}&keyword=${pc.paging.keyword}&condition=${pc.paging.condition}">${vo.title}</a>
+									<small>&nbsp;[${vo.reviewReplyCnt}]</small>
 								</div>
 								</td>
 								<td class="reviewWriter">${vo.userNick}</td>

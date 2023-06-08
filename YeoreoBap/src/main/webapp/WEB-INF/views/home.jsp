@@ -73,7 +73,7 @@
 								</div>
 								<div class="modal-footer">
 									<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">모달 누르면 그냥 지워지는 버튼</button>
-								</div>
+								</div><br>
 							</div>
 						</div>
 					</div>

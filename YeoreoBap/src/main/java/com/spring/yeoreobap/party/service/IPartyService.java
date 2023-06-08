@@ -39,4 +39,5 @@ public interface IPartyService {
 
 	//홈화면에 올릴 리스트
 	List<PartyVO> getListHome();
+	
 }

@@ -38,9 +38,9 @@
         ORDER BY likeCount DESC
         LIMIT 0, 10
     </select>
-	
+    
 	<select id="getArticle" resultType="party">
-		SELECT p.*, s.rdn_whl_addr,
+		SELECT p.*, s.rdn_whl_addr, p.view_num
 		(SELECT COUNT(*) FROM participants
 		WHERE party_no = #{partyNo}) AS
 		attended_num,

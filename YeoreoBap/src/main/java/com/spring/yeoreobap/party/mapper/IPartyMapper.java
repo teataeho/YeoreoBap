@@ -29,4 +29,5 @@ public interface IPartyMapper {
 		int getTotal(PageVO vo);
 	//홈꺼 리스트
 	List<PartyVO> getListHome();
+	
 }
