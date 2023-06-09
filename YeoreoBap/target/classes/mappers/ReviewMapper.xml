@@ -10,19 +10,19 @@
 	 		WHERE title LIKE CONCAT('%', #{keyword}, '%')
 	 	</if>
 	 	<if test="condition == 'writer'">
-	 		WHERE writer LIKE CONCAT('%', #{keyword}, '%')
+	 		WHERE u.user_nick LIKE CONCAT('%', #{keyword}, '%')
 	 	</if>
 	 	<if test="condition == 'content'">
 	 		WHERE content LIKE CONCAT('%', #{keyword}, '%')
 	 	</if>
 	 	<if test="condition == 'restaurant'">
-	 		WHERE sno LIKE CONCAT('%', #{keyword}, '%')
+	 		WHERE s.bplc_nm LIKE CONCAT('%', #{keyword}, '%')
 	 	</if>
 	 	<if test="condition == 'titleContent'">
 	 		WHERE title LIKE CONCAT('%', #{keyword}, '%')
 	 		OR content LIKE CONCAT('%', #{keyword}, '%')
 	 	</if>
-	 </sql>
+	</sql>
 
 
 
@@ -31,6 +31,7 @@
 		(review_no, sno, writer, title, content)
 		VALUES (#{reviewNo}, #{sno}, #{writer}, #{title}, #{content})
 	</insert>
+
 	<!-- regDate, updateDate 삭제 -->
 	<select id="getList" resultType="review">
 		SELECT r.*, u.user_nick, s.bplc_nm
@@ -54,15 +55,18 @@
 	
 	<select id="getTotal" resultType="int">
 		SELECT COUNT(*)
-		FROM review
+		FROM review r
+		JOIN users u
+		ON r.writer = u.user_id
+		JOIN store s ON r.sno = s.sno
 		<include refid="search" />
 	</select>
 	
 	<select id="getContent" resultType="review">
-		SELECT r.*, u.user_nick
-		FROM review r 
-		JOIN users u
-		ON r.writer = u.user_id
+		SELECT r.*, u.user_nick, s.bplc_nm
+		FROM review r
+		JOIN users u ON r.writer = u.user_id
+		JOIN store s ON r.sno = s.sno
 		WHERE review_no = #{reviewNo}
 	</select>
 	
