@@ -6,10 +6,11 @@
 			<h2 class="text-center border-bottom border-orange pb-3 mb-4">여러밥 모집글 작성하기</h2>
 		</section>
 
-		<form class="container" action="${pageContext.request.contextPath}/party/partyRegister" method="POST"
-			name="partyRegisterForm" enctype="multipart/form-data">
-			<div class="d-flex justify-content-between">
-				<div class="d-flex flex-column">
+		<form class="container d-flex justify-content-center"
+			action="${pageContext.request.contextPath}/party/partyRegister" method="POST" name="partyRegisterForm"
+			enctype="multipart/form-data">
+			<div class="d-flex justify-content-center">
+				<div class="d-flex flex-column me-4">
 					<div class="d-flex justify-content-end align-items-center mb-3">
 						<p class="partyRegisterTitle">닉네임<span class="text-orange mx-2">|</span></p>
 						<input type="text" class="form-control flex-grow-1" id="userNick" readonly>
@@ -33,8 +34,8 @@
 					</div>
 
 					<div class="d-flex justify-content-end align-items-center">
-						<p class="m-0 flex-grow-1"><span class="text-orange me-1">＃</span>최대 몇 명까지 모이기 원하시나요?</p>
-						<select id="max" name="max" class="form-select">
+						<p class="m-0 flex-grow-1 me-2"><span class="text-orange me-1">＃</span>최대 몇 명까지 모이기 원하시나요?</p>
+						<select id="partyRegisterMax" name="max" class="form-select">
 							<option value="2">2명</option>
 							<option value="3">3명</option>
 							<option value="4">4명</option>
@@ -44,28 +45,28 @@
 
 				<input type="hidden" name="sno" value="${param.sno}">
 
-				<div class="pictures">
-					<p>썸네일 사진을 선택해주세요.</p>
+				<div id="partyRegisterRight"
+					class="d-inline-flex flex-column justify-content-center border-start border-orange ps-4">
+					<p class="fw-bold mb-1">썸네일 사진을 선택해주세요. <br> <small class="information">(고르지 않으실 시 기본 썸네일로 자동 적용됩니다.)</small>
+					</p>
 
 					<!-- 사용자 지정 -->
-
 					<div class="custom">
-
 						<div class="imgSelect">
-							<label for="file-upload" class="custom-file-upload">
+							<label for="file-upload" class="text-center border border-orange border-2 rounded w-100">
 								<input type="file" name="file" id="file-upload" class="invisible"
 									accept="image/jpg, image/jpeg, image/png" />
 
 								<img id="file-upload-img" src="${pageContext.request.contextPath}/img/upload.png" alt="이미지 선택" />
-								<p>첨부하기</p>
+								<p class="my-3 text-orange">첨부하기</p>
 							</label>
 						</div>
-						<span class="necessary">*(jpg, jpeg, png) 파일만 가능합니다.</span>
+						<span class="necessary mt-1">*(jpg, jpeg, png) 파일만 가능합니다.</span>
 					</div>
 				</div>
 			</div>
 
-			<button type="button" id="partyRegisterBtn">등록하기</button>
+			<button type="button" class="btn btn-orange mt-4">등록하기</button>
 		</form>
 
 		<%@ include file="../include/footer.jsp" %>

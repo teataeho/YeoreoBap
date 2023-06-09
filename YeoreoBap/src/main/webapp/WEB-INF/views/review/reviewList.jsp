@@ -9,9 +9,9 @@
 						<div class="row">
 							<!--lg에서 10그리드, xs에서 전체그리드-->
 							<div class="col-lg-10 col-xs-12 board-table" id="reviewBoard">
-								<div id="reviewListTitle">
-									<h2>후기 게시판</h2>
-								</div>
+								<section id="section">
+									<h2 class="text-center border-bottom border-orange pb-3 mb-4">여러밥 후기</h2>
+								</section>
 
 
 								<!--form select를 가져온다 -->
